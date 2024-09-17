@@ -1,4 +1,4 @@
-// Variable Couleur 
+// Variables de couleurs
 $blackcolor: #000000;
 $whitecolor: #ffffff;
 $validatecolor: #99E2D0;
@@ -6,7 +6,7 @@ $greencolor: #008766;
 $blue-lightcolor: #89C8FA;
 $blue-darkcolor: #003A68;
 $purplecolor: #9356DC;
-$buttongradient : linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+$buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
 // Mixin 
 @mixin flex-center {
@@ -19,90 +19,90 @@ $buttongradient : linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
     border-radius: 25px;
 }
 
-
+// Polices par défaut
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-// Responsive Mobile
-
-@media screen and (max-width: 768px) {
-  
-  body {
+// Styles de base (Mobile First)
+body {
     background-color: $whitecolor;
-    margin: 0px;
-  }
+    margin: 0;
+}
 
-  header {
+header {
     background-color: $whitecolor;
     display: flex;
     justify-content: center;  
     align-items: center;      
     height: 100px;
     flex-direction: column;
-    margin-top: 15px;        
+    margin-top: 15px;
 
     .header__logo {
-      img {
-        width: 162px;
-        height: 44px;
-        object-fit: contain;
-        margin-bottom: 5px;
-      }
+        img {
+            width: 162px;
+            height: 44px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
     }
 
     .header__location {
-      background-color: #EAEAEA;
-      text-align: center;  
-      padding: 15px 0;
-      width: 100%;
-      box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);  
-      gap: 8px;
-      @include flex-center;                    
+        background-color: #EAEAEA;
+        text-align: center;  
+        padding: 15px 0;
+        width: 100%;
+        box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);
+        gap: 8px;
+        @include flex-center;
 
-      i {
-        font-size: 18px;           
-        color: #353535;           
-      }
-
-      p {
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-        color: #353535;
-      }
-    }
-  }
-
-  main {
-    height: auto; 
-  
-    .main__presentation {
-      display: flex;              
-      justify-content: center;    
-      align-items: center;        
-      height: 100%;               
-      text-align: center;         
-      padding: 20px;  
-      background-color: rgb(247, 247, 247);            
-  
-      section {
-        max-width: 600px;         
-  
-        h1 {
-          font-size: 24px;      
-          margin-bottom: 20px;    
+        i {
+            font-size: 18px;
+            color: #353535;
         }
-  
+
         p {
-          font-size: 18px;      
-          margin-bottom: 20px;    
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+            color: #353535;
         }
-      }
     }
-  }
+}
 
-  .button {
+main {
+    height: auto;
+    background-color: rgb(247, 247, 247);
+
+    .main__presentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;               
+        text-align: center;
+        padding: 20px;
+
+        section {
+            max-width: 600px;
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.button {
     width: 218px;
     height: 50px;
     border: none;
@@ -113,9 +113,10 @@ $buttongradient : linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
     color: #FFFFFF;
     background: $buttongradient;
     @include bouton-rond;
+
     &:hover {
         background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
-      }
-  }
-}  
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
+    }
+}
+

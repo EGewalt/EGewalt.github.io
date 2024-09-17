@@ -1,86 +1,90 @@
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background-color: #ffffff;
-    margin: 0px;
-  }
-  header {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-  header .header__logo img {
-    width: 162px;
-    height: 44px;
-    -o-object-fit: contain;
-       object-fit: contain;
-    margin-bottom: 5px;
-  }
-  header .header__location {
-    background-color: #EAEAEA;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
-    box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);
-    gap: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header .header__location i {
-    font-size: 18px;
-    color: #353535;
-  }
-  header .header__location p {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    color: #353535;
-  }
-  main {
-    height: auto;
-  }
-  main .main__presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(247, 247, 247);
-  }
-  main .main__presentation section {
-    max-width: 600px;
-  }
-  main .main__presentation section h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  main .main__presentation section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .button {
-    width: 218px;
-    height: 50px;
-    border: none;
-    box-shadow: 0px 4px 10px 0px rgba(36, 36, 36, 0.251);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19px;
-    color: #FFFFFF;
-    background: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
-    border-radius: 25px;
-  }
-  .button:hover {
-    background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
-  }
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+  margin-top: 15px;
+}
+header .header__logo img {
+  width: 162px;
+  height: 44px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 5px;
+}
+header .header__location {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__location i {
+  font-size: 18px;
+  color: #353535;
+}
+header .header__location p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #353535;
+}
+
+main {
+  height: auto;
+  background-color: rgb(247, 247, 247);
+}
+main .main__presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+main .main__presentation section {
+  max-width: 600px;
+}
+main .main__presentation section h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+main .main__presentation section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 218px;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 36, 0.251);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  border-radius: 25px;
+}
+.button:hover {
+  background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
 }/*# sourceMappingURL=style.css.map */
