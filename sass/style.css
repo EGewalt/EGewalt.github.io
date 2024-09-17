@@ -1,0 +1,43 @@
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #ffffff;
+    margin: 0px;
+  }
+  header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  header .header__logo img {
+    width: 162px;
+    height: 44px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-bottom: 5px;
+  }
+  header .header__location {
+    background-color: #EAEAEA;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header__location i {
+    font-size: 16px;
+    color: #353535;
+  }
+  header .header__location p {
+    font-size: 16px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #353535;
+  }
+}/*# sourceMappingURL=style.css.map */
