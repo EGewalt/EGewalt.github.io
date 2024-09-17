@@ -14,6 +14,10 @@ $purplecolor: #9356DC;
     align-items: center;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 // Responsive Mobile
 
 @media screen and (max-width: 768px) {
@@ -44,21 +48,21 @@ $purplecolor: #9356DC;
     .header__location {
       background-color: #EAEAEA;
       text-align: center;  
-      padding: 10px 0;
+      padding: 15px 0;
       width: 100%;
       box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);  
       gap: 8px;
       @include flex-center;                    
 
       i {
-        font-size: 16px;           
+        font-size: 18px;           
         color: #353535;           
       }
 
       p {
         font-size: 16px;
+        font-weight: bold;
         margin: 0;
-        font-family: 'Roboto', sans-serif;
         color: #353535;
       }
     }
