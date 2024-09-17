@@ -44,4 +44,26 @@
     margin: 0;
     color: #353535;
   }
+  main {
+    height: auto;
+  }
+  main .main__presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  main .main__presentation section {
+    max-width: 600px;
+  }
+  main .main__presentation section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  main .main__presentation section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
