@@ -7,7 +7,6 @@
 
 body {
   background-color: #ffffff;
-  margin: 0;
 }
 
 header {
@@ -44,12 +43,10 @@ header .header__location i {
 header .header__location p {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
   color: #353535;
 }
 
 main {
-  height: auto;
   background-color: rgb(247, 247, 247);
 }
 main .main__presentation {
@@ -119,6 +116,10 @@ main .main__presentation section p {
   align-items: center;
   padding: 0 35px;
   border-radius: 25px;
+}
+.main-fonctionnement__card:hover i {
+  color: #9356DC;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 .main-fonctionnement i {
   color: #7E7E7E;

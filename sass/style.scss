@@ -27,11 +27,11 @@ $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
     padding: 0;
 }
 
-// Styles de base (Mobile First)
 body {
     background-color: $whitecolor;
-    margin: 0;
 }
+
+// Header
 
 header {
     background-color: $whitecolor;
@@ -68,15 +68,15 @@ header {
         p {
             font-size: 16px;
             font-weight: bold;
-            margin: 0;
             color: #353535;
         }
     }
 }
 
 main {
-    height: auto;
     background-color: rgb(247, 247, 247);
+
+    // Section Presentation
 
     .main__presentation {
         display: flex;
@@ -102,6 +102,8 @@ main {
     }
 }
 
+// Button par default
+
 .button {
     width: 218px;
     height: 50px;
@@ -119,6 +121,8 @@ main {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
     }
 }
+
+// Section Fonctionnement
 
 .main-fonctionnement {
     background-color: $whitecolor;
@@ -150,6 +154,10 @@ main {
         align-items: center; 
         padding: 0 35px; 
         @include bouton-rond;
+        &:hover i {
+            color: $purplecolor; 
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
     }
 
     i {
@@ -157,6 +165,3 @@ main {
         padding-right: 20px;
     }
 }
-
-
-
