@@ -116,10 +116,25 @@ main .main__presentation section p {
   align-items: center;
   padding: 0 35px;
   border-radius: 25px;
+  position: relative;
 }
 .main-fonctionnement__card:hover i {
   color: #9356DC;
   transition: transform 0.3s ease, color 0.3s ease;
+}
+.main-fonctionnement .circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  left: -11px;
 }
 .main-fonctionnement i {
   color: #7E7E7E;

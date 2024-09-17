@@ -154,12 +154,31 @@ main {
         align-items: center; 
         padding: 0 35px; 
         @include bouton-rond;
+        position: relative;
+
         &:hover i {
             color: $purplecolor; 
             transition: transform 0.3s ease, color 0.3s ease; 
         }
     }
 
+    // Cercle
+    .circle {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: $purplecolor;
+        color: $whitecolor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        position: absolute;
+        left: -11px;
+    }
+    
+    // Icone
     i {
         color: #7E7E7E;
         padding-right: 20px;
