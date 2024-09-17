@@ -54,6 +54,7 @@
     height: 100%;
     text-align: center;
     padding: 20px;
+    background-color: rgb(247, 247, 247);
   }
   main .main__presentation section {
     max-width: 600px;
@@ -65,5 +66,21 @@
   main .main__presentation section p {
     font-size: 18px;
     margin-bottom: 20px;
+  }
+  .button {
+    width: 218px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 10px 0px rgba(36, 36, 36, 0.251);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+    border-radius: 25px;
+  }
+  .button:hover {
+    background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   }
 }/*# sourceMappingURL=style.css.map */
