@@ -9,10 +9,10 @@ $purplecolor: #9356DC;
 $greycolor: #F3F3F3;
 $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
-// Mixin 
+// Mixin
 @mixin flex-center {
-    display: flex;              
-    justify-content: center;     
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -33,12 +33,11 @@ body {
 }
 
 // Header
-
 header {
     background-color: $whitecolor;
     display: flex;
-    justify-content: center;  
-    align-items: center;      
+    justify-content: center;
+    align-items: center;
     height: 100px;
     flex-direction: column;
     margin-top: 15px;
@@ -54,7 +53,7 @@ header {
 
     .header__location {
         background-color: $greycolor;
-        text-align: center;  
+        text-align: center;
         padding: 15px 0;
         width: 100%;
         box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.38);
@@ -78,12 +77,11 @@ main {
     background-color: rgb(247, 247, 247);
 
     // Section Presentation
-
     .main__presentation {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;               
+        height: 100%;
         text-align: center;
         padding: 20px;
 
@@ -104,7 +102,6 @@ main {
 }
 
 // Button par default
-
 .button {
     width: 218px;
     height: 50px;
@@ -124,14 +121,13 @@ main {
 }
 
 // Section Fonctionnement
-
 .main-fonctionnement {
     background-color: $whitecolor;
     padding-top: 50px;
 
     &__h1 {
-        margin-left: auto;  
-        padding-left: 20px; 
+        margin-left: auto;
+        padding-left: 20px;
     }
 
     &__cards {
@@ -151,16 +147,16 @@ main {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
         font-size: 16px;
         font-weight: bold;
-        text-align: start; 
+        text-align: start;
         display: flex;
-        align-items: center; 
-        padding: 0 35px; 
+        align-items: center;
+        padding: 0 35px;
         @include bouton-rond;
         position: relative;
 
         &:hover i {
-            color: $purplecolor; 
-            transition: transform 0.3s ease, color 0.3s ease; 
+            color: $purplecolor;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
     }
 
@@ -179,7 +175,7 @@ main {
         position: absolute;
         left: -11px;
     }
-    
+
     // Icone
     i {
         color: #7E7E7E;
@@ -188,10 +184,9 @@ main {
 }
 
 // Section Restaurants
-
 .main-restaurants {
     background-color: $greycolor;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
     padding-top: 40px;
     @include flex-center;
     flex-direction: column;
@@ -207,8 +202,8 @@ main {
 
     &__cards {
         display: flex;
-        flex-direction: column;  
-        gap: 20px;               
+        flex-direction: column;
+        gap: 20px;
         width: 100%;
         padding: 0 20px;
     }
@@ -216,8 +211,8 @@ main {
     &__card {
         background-color: $whitecolor;
         border-radius: 20px;
-        width: 100%; 
-        position: relative; 
+        width: 100%;
+        position: relative;
     }
 
     &__img {
@@ -249,5 +244,43 @@ main {
         right: 20px;
         color: $blackcolor;
         font-size: 30px;
+    }
+}
+
+// Section Footer
+
+footer {
+    background-color: #353535;
+    padding: 30px;
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .footer-title {
+        font-family: "Shrikhand", serif;
+        color: $whitecolor;
+        font-weight: lighter;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $whitecolor;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 3px 0;
+
+        .footer__icon {
+            font-size: 14px;
+            margin-right: 6px;
+            min-width: 20px;
+            text-align: center;
+        }
     }
 }

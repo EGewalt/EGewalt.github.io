@@ -144,7 +144,7 @@ main .main__presentation section p {
 
 .main-restaurants {
   background-color: #F3F3F3;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -197,4 +197,36 @@ main .main__presentation section p {
   right: 20px;
   color: #000000;
   font-size: 30px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 30px;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+footer .footer-title {
+  font-family: "Shrikhand", serif;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 3px 0;
+}
+footer a .footer__icon {
+  font-size: 14px;
+  margin-right: 6px;
+  min-width: 20px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
