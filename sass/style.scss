@@ -217,7 +217,7 @@ main {
         background-color: $whitecolor;
         border-radius: 20px;
         width: 100%; 
-
+        position: relative; 
     }
 
     &__img {
@@ -230,6 +230,7 @@ main {
     &__text {
         padding: 15px;
         text-align: start;
+        position: relative;
 
         h2 {
             font-size: 18px;
@@ -240,5 +241,13 @@ main {
         p {
             font-size: 17px;
         }
+    }
+
+    &__heart {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $blackcolor;
+        font-size: 30px;
     }
 }
