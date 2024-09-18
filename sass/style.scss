@@ -245,6 +245,22 @@ main {
         color: $blackcolor;
         font-size: 30px;
     }
+
+    &__new {
+        background-color: #99E2D0;  
+        color: $greencolor;        
+        width: 80px;               
+        height: 29px;              
+        position: absolute;        
+        right: 20px;               
+        top: 20px;                 
+        border-radius: 2px;        
+        text-align: center;        
+        line-height: 29px;         
+        font-size: 14px;           
+        font-weight: bold;         
+    }
+    
 }
 
 // Section Footer
