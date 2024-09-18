@@ -195,8 +195,30 @@ main .main__presentation section p {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: #000000;
+}
+.main-restaurants__heart input[type=checkbox] {
+  display: none;
+}
+.main-restaurants__heart label {
   font-size: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.main-restaurants__heart .heart-empty {
+  color: #000000;
+}
+.main-restaurants__heart .heart-full {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  display: none;
+}
+.main-restaurants__heart input[type=checkbox]:checked + label .heart-empty {
+  display: none;
+}
+.main-restaurants__heart input[type=checkbox]:checked + label .heart-full {
+  display: inline;
 }
 .main-restaurants__new {
   background-color: #99E2D0;
