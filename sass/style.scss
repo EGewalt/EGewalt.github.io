@@ -6,7 +6,7 @@ $greencolor: #008766;
 $blue-lightcolor: #89C8FA;
 $blue-darkcolor: #003A68;
 $purplecolor: #9356DC;
-$greycolor: #F3F3F3;
+$greycolor: #EAEAEA;
 $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
 // Mixin
@@ -70,6 +70,10 @@ header {
             font-weight: bold;
             color: #353535;
         }
+
+        @media screen and (min-width: 1024px) {
+            box-shadow: none;
+        }
     }
 }
 
@@ -98,8 +102,25 @@ main {
                 margin-bottom: 20px;
             }
         }
+
+        @media screen and (min-width: 1024px) {
+            section {
+                max-width: 100%;
+                padding-bottom: 20px;
+                
+                h1 {
+                    font-size: 40px;
+                    white-space: nowrap;
+                }
+
+                p {
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
     }
-}
+    
 
 // Button par default
 .button {
@@ -289,7 +310,7 @@ main {
         font-weight: bold;
     }
 }
-
+}
 
 // Section Footer
 
