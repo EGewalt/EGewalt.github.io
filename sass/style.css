@@ -200,32 +200,13 @@ main .main-restaurants__cards {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 20px;
-}
-@media screen and (min-width: 1024px) {
-  main .main-restaurants__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
-    padding-left: 50px;
-  }
 }
 main .main-restaurants__card {
   background-color: #ffffff;
   border-radius: 20px;
   width: 100%;
   position: relative;
-}
-@media screen and (min-width: 1024px) {
-  main .main-restaurants__card {
-    width: 490px;
-    height: 251px;
-  }
 }
 main .main-restaurants__img {
   width: 100%;
@@ -301,25 +282,12 @@ footer .footer-container {
   align-items: flex-start;
   gap: 5px;
 }
-@media screen and (min-width: 1024px) {
-  footer .footer-container {
-    flex-direction: row;
-    justify-content: end;
-  }
-}
 footer .footer-title {
   font-family: "Shrikhand", serif;
   color: #ffffff;
   font-weight: lighter;
   font-size: 24px;
   margin-bottom: 10px;
-}
-@media screen and (min-width: 1024px) {
-  footer .footer-title {
-    order: 4;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
 footer a {
   display: flex;
@@ -328,11 +296,6 @@ footer a {
   text-decoration: none;
   font-size: 16px;
   margin: 3px 0;
-}
-@media screen and (min-width: 1024px) {
-  footer a {
-    justify-content: space-between;
-  }
 }
 footer a .footer__icon {
   font-size: 14px;
