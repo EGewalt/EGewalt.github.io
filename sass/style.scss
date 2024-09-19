@@ -360,7 +360,7 @@ footer {
         align-items: flex-start;
         gap: 5px;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px) {
             flex-direction: row;
             justify-content: end;
         }
@@ -372,25 +372,31 @@ footer {
         font-weight: lighter;
         font-size: 24px;
         margin-bottom: 10px;
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px) {
             order: 4;
             padding-left: 50px;
             padding-right: 50px;
         }  
     }
 
-    a {
+    .footer-link {
         display: flex;
         align-items: center;
         color: $whitecolor;
         text-decoration: none;
         font-size: 16px;
         margin: 3px 0;
-    
+
         @media screen and (min-width: 1024px) {
-            justify-content: space-between;
+            &.restaurant,
+            &.partner{
+                padding-right: 20px;
+            }
+            &.legal {
+                padding-left: 30px;
+            }
         }
-    
+
         .footer__icon {
             font-size: 14px;
             margin-right: 6px;
@@ -398,7 +404,4 @@ footer {
             text-align: center;
         }
     }
-    
 }
-
-

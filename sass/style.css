@@ -321,7 +321,7 @@ footer .footer-title {
     padding-right: 50px;
   }
 }
-footer a {
+footer .footer-link {
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -330,11 +330,14 @@ footer a {
   margin: 3px 0;
 }
 @media screen and (min-width: 1024px) {
-  footer a {
-    justify-content: space-between;
+  footer .footer-link.restaurant, footer .footer-link.partner {
+    padding-right: 20px;
+  }
+  footer .footer-link.legal {
+    padding-left: 30px;
   }
 }
-footer a .footer__icon {
+footer .footer-link .footer__icon {
   font-size: 14px;
   margin-right: 6px;
   min-width: 20px;
