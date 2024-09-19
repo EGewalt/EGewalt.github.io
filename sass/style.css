@@ -195,6 +195,12 @@ main .main-restaurants__h1 {
   padding-left: 20px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1024px) {
+  main .main-restaurants__h1 {
+    padding-left: 380px;
+    padding-bottom: 20px;
+  }
+}
 main .main-restaurants__cards {
   display: flex;
   flex-direction: column;
