@@ -152,7 +152,7 @@ main {
     padding-top: 50px;
 
     @include media-desktop {
-        padding: 35px 120px 0;
+        padding: 20px 120px 0;
         display: flex; 
         flex-direction: column;
     }
@@ -266,7 +266,7 @@ main {
             margin: 0 auto;
             padding: 0;
             max-width: 1200px;
-            padding-left: 50px;
+            padding-left: 40px;
         }
     }
 
@@ -277,7 +277,7 @@ main {
         position: relative;
 
         @include media-desktop {
-            width: 490px;
+            width: 500px;
             height: 251px;
         }
     }
