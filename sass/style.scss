@@ -246,7 +246,19 @@ main {
         flex-direction: column;
         gap: 20px;
         width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 0 20px;
+
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1200px;
+            padding-left: 50px;
+        }
     }
 
     &__card {
@@ -254,6 +266,11 @@ main {
         border-radius: 20px;
         width: 100%;
         position: relative;
+
+        @media screen and (min-width: 1024px) {
+            width: 490px;
+            height: 251px;
+        }
     }
 
     &__img {
@@ -316,10 +333,10 @@ main {
     }
 
     &__new {
-        background-color: #99E2D0;  
+        background-color: #99E2D0;
         color: $greencolor;
-        width: 80px; 
-        height: 29px;      
+        width: 80px;
+        height: 29px;
         position: absolute;
         right: 20px;
         top: 20px;
@@ -333,7 +350,6 @@ main {
 }
 
 // Section Footer
-
 footer {
     background-color: #353535;
     padding: 30px;
@@ -343,6 +359,11 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+            justify-content: end;
+        }
     }
 
     .footer-title {
@@ -351,6 +372,11 @@ footer {
         font-weight: lighter;
         font-size: 24px;
         margin-bottom: 10px;
+        @media screen and (min-width: 1024px){
+            order: 4;
+            padding-left: 50px;
+            padding-right: 50px;
+        }  
     }
 
     a {
@@ -360,7 +386,11 @@ footer {
         text-decoration: none;
         font-size: 16px;
         margin: 3px 0;
-
+    
+        @media screen and (min-width: 1024px) {
+            justify-content: space-between;
+        }
+    
         .footer__icon {
             font-size: 14px;
             margin-right: 6px;
@@ -368,4 +398,7 @@ footer {
             text-align: center;
         }
     }
+    
 }
+
+
