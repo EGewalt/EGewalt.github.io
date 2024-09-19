@@ -388,12 +388,16 @@ footer {
         margin: 3px 0;
 
         @media screen and (min-width: 1024px) {
+            padding-top: 10px;
             &.restaurant,
             &.partner{
-                padding-right: 20px;
+                padding-right: 5px;
             }
             &.legal {
                 padding-left: 30px;
+            }
+            &.contact {
+                padding-left: 9px;
             }
         }
 

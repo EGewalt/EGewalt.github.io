@@ -330,11 +330,17 @@ footer .footer-link {
   margin: 3px 0;
 }
 @media screen and (min-width: 1024px) {
+  footer .footer-link {
+    padding-top: 10px;
+  }
   footer .footer-link.restaurant, footer .footer-link.partner {
-    padding-right: 20px;
+    padding-right: 5px;
   }
   footer .footer-link.legal {
     padding-left: 30px;
+  }
+  footer .footer-link.contact {
+    padding-left: 9px;
   }
 }
 footer .footer-link .footer__icon {
