@@ -107,9 +107,23 @@ main .main-fonctionnement {
   background-color: #ffffff;
   padding-top: 50px;
 }
+@media screen and (min-width: 1024px) {
+  main .main-fonctionnement {
+    padding: 35px 120px 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
 main .main-fonctionnement__h1 {
   margin-left: auto;
   padding-left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main .main-fonctionnement__h1 {
+    padding-left: 260px;
+    align-self: flex-start;
+    padding-top: 35px;
+  }
 }
 main .main-fonctionnement__cards {
   display: flex;
@@ -120,6 +134,13 @@ main .main-fonctionnement__cards {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  main .main-fonctionnement__cards {
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+  }
 }
 main .main-fonctionnement__card {
   width: 335px;

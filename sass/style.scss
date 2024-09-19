@@ -146,9 +146,21 @@ main {
     background-color: $whitecolor;
     padding-top: 50px;
 
+    @media screen and (min-width: 1024px) {
+        padding: 35px 120px 0;
+        display: flex;  // Utilisation de flexbox pour aligner le h1 et les cartes
+        flex-direction: column;
+    }
+
     &__h1 {
         margin-left: auto;
         padding-left: 20px;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 260px;
+            align-self: flex-start; 
+            padding-top: 35px; 
+        }
     }
 
     &__cards {
@@ -157,7 +169,14 @@ main {
         text-align: center;
         padding-top: 18px;
         padding-bottom: 40px;
+
         @include flex-center;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            gap: 40px;
+            align-items: flex-start;
+        }
     }
 
     &__card {
@@ -172,6 +191,7 @@ main {
         display: flex;
         align-items: center;
         padding: 0 35px;
+
         @include bouton-rond;
         position: relative;
 
