@@ -145,28 +145,40 @@ header {
         }
     }
 
-    &__cards {
-        width: 100%;
-        background-color: $whitecolor;
-        height: 72px;
-        border-radius: 15px;
-        margin-top: 10px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    // Menu Cards
+    .menu-container {
+        &__cards {
+            width: 100%;
+            background-color: $whitecolor;
+            border-radius: 15px;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            overflow: hidden;
+        }
+    
+        &__card {
+            padding: 15px;
+            display: flex;
+            flex-direction: column; 
+    
+            h3 {
+                padding-bottom: 5px;
+            }
+    
+            p {
+                margin: 0; 
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    
+        &__price {
+            font-weight: bold;
+            color: #353535;
+        }
     }
-
-    &__card {
-        padding: 15px;
-    }
-
-    &__price {
-        font-weight: bold;
-        color: #353535;
-        position: absolute;
-        right: 10%;
-        top: 52%;
-    }
-}
-
+}    
 
 
 // Section Footer

@@ -98,23 +98,31 @@ header .header__logo img {
 .menu-container__heart input[type=checkbox]:checked + label .heart-full {
   display: inline;
 }
-.menu-container__cards {
+.menu-container .menu-container__cards {
   width: 100%;
   background-color: #ffffff;
-  height: 72px;
   border-radius: 15px;
   margin-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  overflow: hidden;
 }
-.menu-container__card {
+.menu-container .menu-container__card {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
-.menu-container__price {
+.menu-container .menu-container__card h3 {
+  padding-bottom: 5px;
+}
+.menu-container .menu-container__card p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-container .menu-container__price {
   font-weight: bold;
   color: #353535;
-  position: absolute;
-  right: 10%;
-  top: 52%;
 }
 
 footer {
