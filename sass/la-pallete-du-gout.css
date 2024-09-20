@@ -49,11 +49,11 @@ header .header__logo img {
   display: flex;
   flex-direction: column;
   min-height: 300px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   background-color: #F6F6F6;
   position: relative;
-  margin-top: -100px;
+  margin-top: -50px;
   z-index: 1;
   padding: 20px;
 }
