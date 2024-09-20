@@ -44,8 +44,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 70px;
     flex-direction: column;
+
+    i {
+     position: absolute;
+     top: 21px;
+     left: 35px;
+     font-size: 25px;
+     text-decoration: none;
+     color: #353535
+    }
     
 
     .header__logo {
@@ -60,32 +69,29 @@ header {
 
 .image-container {
     width: 100%;
-    position: relative; 
+    height: 100%;
+    
 
     img {
         width: 100%;
-        object-fit: cover;
         height: 100%;
+        object-fit: cover;
     }
 }
 
-.main-container {
+// Section Menu
+
+.menu-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     height: 300px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    background-color: #003A68;
-    
-    position: absolute;  
-    top: 200px;          
+    background-color: $greycolor; 
+    top: 260px;          
     left: 0;
 }
-
-
-
-
 
 
 
@@ -97,7 +103,6 @@ header {
 footer {
     background-color: #353535;
     padding: 30px;
-    position: relative;
 
     .footer-container {
         display: flex;
