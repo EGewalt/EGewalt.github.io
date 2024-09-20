@@ -1,0 +1,109 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex-direction: column;
+}
+header .header__logo img {
+  width: 162px;
+  height: 44px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #003A68;
+  position: absolute;
+  top: 200px;
+  left: 0;
+}
+
+footer {
+  background-color: #353535;
+  padding: 30px;
+  position: relative;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    flex-direction: row;
+    justify-content: end;
+  }
+}
+footer .footer-title {
+  font-family: "Shrikhand", serif;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-title {
+    order: 4;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+footer .footer-link {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 3px 0;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-link {
+    padding-top: 10px;
+  }
+  footer .footer-link.restaurant, footer .footer-link.partner {
+    padding-right: 5px;
+  }
+  footer .footer-link.legal {
+    padding-left: 30px;
+  }
+  footer .footer-link.contact {
+    padding-left: 9px;
+  }
+}
+footer .footer-link .footer__icon {
+  font-size: 14px;
+  margin-right: 6px;
+  min-width: 20px;
+  text-align: center;
+}/*# sourceMappingURL=la-pallete-du-gout.css.map */

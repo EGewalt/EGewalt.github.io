@@ -1,0 +1,157 @@
+// Variables de couleurs
+$blackcolor: #000000;
+$whitecolor: #ffffff;
+$validatecolor: #99E2D0;
+$greencolor: #008766;
+$blue-lightcolor: #89C8FA;
+$blue-darkcolor: #003A68;
+$purplecolor: #9356DC;
+$greycolor: #EAEAEA;
+$buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+
+// Mixin
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bouton-rond {
+    border-radius: 25px;
+}
+
+@mixin media-desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+// Polices par défaut
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $whitecolor;
+}
+
+// Header
+header {
+    background-color: $whitecolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    flex-direction: column;
+    
+
+    .header__logo {
+        img {
+            width: 162px;
+            height: 44px;
+            object-fit: contain;
+            
+        }
+    }
+}
+
+.image-container {
+    width: 100%;
+    position: relative;  // Permet de positionner les éléments enfants par rapport à cet élément
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #003A68;
+    
+    position: absolute;  // Chevauche l'image
+    top: 200px;          // Ajuste cette valeur pour contrôler le chevauchement (par exemple, 200px)
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Section Footer
+footer {
+    background-color: #353535;
+    padding: 30px;
+    position: relative;
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+        @include media-desktop {
+            flex-direction: row;
+            justify-content: end;
+        }
+    }
+
+    .footer-title {
+        font-family: "Shrikhand", serif;
+        color: $whitecolor;
+        font-weight: lighter;
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        @include media-desktop {
+            order: 4;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    .footer-link {
+        display: flex;
+        align-items: center;
+        color: $whitecolor;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 3px 0;
+
+        @include media-desktop {
+            padding-top: 10px;
+            &.restaurant,
+            &.partner {
+                padding-right: 5px;
+            }
+            &.legal {
+                padding-left: 30px;
+            }
+            &.contact {
+                padding-left: 9px;
+            }
+        }
+
+        .footer__icon {
+            font-size: 14px;
+            margin-right: 6px;
+            min-width: 20px;
+            text-align: center;
+        }
+    }
+}

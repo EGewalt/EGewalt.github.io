@@ -191,6 +191,10 @@ main .main-restaurants {
 main .main-restaurants section {
   width: 100%;
 }
+main .main-restaurants a {
+  text-decoration: none;
+  color: inherit;
+}
 main .main-restaurants__h1 {
   padding-left: 20px;
   margin-bottom: 20px;
