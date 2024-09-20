@@ -101,6 +101,13 @@ header {
         padding-left: 1px;
     }
 
+    .entree {
+        padding-top: 25px;
+        padding-bottom: 5px;
+        border-bottom: #99E2D0 3px solid;
+        width: 40px;
+    }
+
     // Icone Heart
 
     &__heart {
@@ -137,7 +144,29 @@ header {
             display: inline;
         }
     }
+
+    &__cards {
+        width: 100%;
+        background-color: $whitecolor;
+        height: 72px;
+        border-radius: 15px;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+
+    &__card {
+        padding: 15px;
+    }
+
+    &__price {
+        font-weight: bold;
+        color: #353535;
+        position: absolute;
+        right: 10%;
+        top: 52%;
+    }
 }
+
 
 
 // Section Footer

@@ -17,9 +17,8 @@
 </head>
 
 <body>
-    
     <header>
-        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="../index.html" aria-label="Retour à l'accueil"><i class="fas fa-arrow-left"></i></a>
         <div class="header__logo">
             <img src="/assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
         </div>
@@ -27,7 +26,7 @@
 
     <main>
         <div class="image-container">
-            <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du gôut">
         </div>
 
         <div class="menu-container">
@@ -35,15 +34,23 @@
                 <h1>La palette du gôut</h1>
                 <div class="menu-container__heart">
                     <input type="checkbox" id="heart1" class="heart-checkbox">
-                    <label for="heart1">
+                    <label for="heart1" aria-label="Ajouter à mes favoris">
                         <i class="fa-regular fa-heart heart-empty"></i>
                         <i class="fa-solid fa-heart heart-full"></i>
                     </label>
                 </div>
-
+                <div class="entree">
+                    <p>ENTRÉES</p>
+                </div>
+                <div class="menu-container__cards">
+                    <div class="menu-container__card">
+                        <h3>Fricassée d'escargots</h3>
+                        <p>Au piment d'Espelette</p>
+                        <div class="menu-container__price">25€</div>
+                    </div>
+                </div>
             </section>
         </div>
-        
     </main>
 
     <footer>
@@ -55,8 +62,6 @@
             <a href="mailto:contact@ohmyfood.com" class="footer-link contact">Contact</a>
         </div>
     </footer>
-
-
 </body>
 
 </html>
