@@ -100,11 +100,44 @@ header {
         font-size: 28px;
         padding-left: 1px;
     }
+
+    // Icone Heart
+
+    &__heart {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .heart-empty {
+            color: $blackcolor;
+        }
+
+        .heart-full {
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            background-clip: text;
+            color: transparent;
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label .heart-empty {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label .heart-full {
+            display: inline;
+        }
+    }
 }
-
-
-
-
 
 
 // Section Footer
