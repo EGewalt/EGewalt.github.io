@@ -60,7 +60,7 @@ header {
 
 .image-container {
     width: 100%;
-    position: relative;  // Permet de positionner les éléments enfants par rapport à cet élément
+    position: relative; 
 
     img {
         width: 100%;
@@ -78,8 +78,8 @@ header {
     border-top-right-radius: 30px;
     background-color: #003A68;
     
-    position: absolute;  // Chevauche l'image
-    top: 200px;          // Ajuste cette valeur pour contrôler le chevauchement (par exemple, 200px)
+    position: absolute;  
+    top: 200px;          
     left: 0;
 }
 
