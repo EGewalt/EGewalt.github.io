@@ -48,21 +48,19 @@ header {
     flex-direction: column;
 
     i {
-     position: absolute;
-     top: 21px;
-     left: 35px;
-     font-size: 25px;
-     text-decoration: none;
-     color: #353535
+        position: absolute;
+        top: 21px;
+        left: 35px;
+        font-size: 25px;
+        text-decoration: none;
+        color: #353535;
     }
-    
 
     .header__logo {
         img {
             width: 162px;
             height: 44px;
             object-fit: contain;
-            
         }
     }
 }
@@ -80,7 +78,6 @@ header {
 }
 
 // Section Menu
-
 .menu-container {
     width: 100%;
     display: flex;
@@ -90,7 +87,7 @@ header {
     border-top-right-radius: 50px;
     background-color: #F6F6F6;
     position: relative;
-    margin-top: -50px; 
+    margin-top: -50px;
     z-index: 1;
     padding: 20px;
 
@@ -109,7 +106,6 @@ header {
     }
 
     // Icone Heart
-
     &__heart {
         position: absolute;
         top: 20px;
@@ -180,7 +176,36 @@ header {
     }
 }
 
+// BOUTON COMMANDER
+.commander {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 45px;
+    background-color: #F6F6F6;
 
+    // Button par défaut
+    .button {
+        width: 218px;
+        height: 50px;
+        border: none;
+        box-shadow: 0px 4px 10px 0px rgba(36, 36, 36, 0.251);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        color: #FFFFFF;
+        background: $buttongradient;
+        @include bouton-rond;
+
+        &:hover {
+            background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
+        }
+    }
+}
 
 // Section Footer
 footer {
@@ -224,13 +249,16 @@ footer {
 
         @include media-desktop {
             padding-top: 10px;
+
             &.restaurant,
             &.partner {
                 padding-right: 5px;
             }
+
             &.legal {
                 padding-left: 30px;
             }
+
             &.contact {
                 padding-left: 9px;
             }

@@ -125,6 +125,33 @@ header .header__logo img {
   color: #353535;
 }
 
+.commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 45px;
+  background-color: #F6F6F6;
+}
+.commander .button {
+  width: 218px;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 36, 0.251);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  border-radius: 25px;
+}
+.commander .button:hover {
+  background: linear-gradient(-185deg, #FF79DA 20.74%, #9356DC 120%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.349);
+}
+
 footer {
   background-color: #353535;
   padding: 30px;
