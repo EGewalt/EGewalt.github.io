@@ -101,7 +101,7 @@ header {
         padding-left: 1px;
     }
 
-    .entree {
+    .titre-section {
         padding-top: 25px;
         padding-bottom: 5px;
         border-bottom: #99E2D0 3px solid;
@@ -149,36 +149,37 @@ header {
     .menu-container {
         &__cards {
             width: 100%;
+            margin-top: 10px;
+        }
+
+        &__card {
             background-color: $whitecolor;
             border-radius: 15px;
-            margin-top: 10px;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-            overflow: hidden;
-        }
-    
-        &__card {
             padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
             display: flex;
-            flex-direction: column; 
-    
+            flex-direction: column;
+
             h3 {
                 padding-bottom: 5px;
             }
-    
+
             p {
-                margin: 0; 
+                margin: 0;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
         }
-    
+
         &__price {
             font-weight: bold;
             color: #353535;
         }
     }
-}    
+}
+
 
 
 // Section Footer

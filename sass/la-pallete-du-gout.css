@@ -63,7 +63,7 @@ header .header__logo img {
   font-size: 28px;
   padding-left: 1px;
 }
-.menu-container .entree {
+.menu-container .titre-section {
   padding-top: 25px;
   padding-bottom: 5px;
   border-bottom: #99E2D0 3px solid;
@@ -100,14 +100,14 @@ header .header__logo img {
 }
 .menu-container .menu-container__cards {
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 15px;
   margin-top: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  overflow: hidden;
 }
 .menu-container .menu-container__card {
+  background-color: #ffffff;
+  border-radius: 15px;
   padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   display: flex;
   flex-direction: column;
 }
