@@ -260,7 +260,7 @@ main .main-restaurants__text p {
 main .main-restaurants__heart {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 40px;
 }
 main .main-restaurants__heart input[type=checkbox] {
   display: none;
@@ -269,22 +269,37 @@ main .main-restaurants__heart label {
   font-size: 30px;
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+main .main-restaurants__heart .heart-empty,
+main .main-restaurants__heart .heart-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
 }
 main .main-restaurants__heart .heart-empty {
   color: #000000;
+  opacity: 1;
+  visibility: visible;
 }
 main .main-restaurants__heart .heart-full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 main .main-restaurants__heart input[type=checkbox]:checked + label .heart-empty {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 main .main-restaurants__heart input[type=checkbox]:checked + label .heart-full {
-  display: inline;
+  opacity: 1;
+  visibility: visible;
 }
 main .main-restaurants__new {
   background-color: #99E2D0;

@@ -81,22 +81,37 @@ header .header__logo img {
   font-size: 30px;
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.menu-container__heart .heart-empty,
+.menu-container__heart .heart-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
 }
 .menu-container__heart .heart-empty {
   color: #000000;
+  opacity: 1;
+  visibility: visible;
 }
 .menu-container__heart .heart-full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .menu-container__heart input[type=checkbox]:checked + label .heart-empty {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .menu-container__heart input[type=checkbox]:checked + label .heart-full {
-  display: inline;
+  opacity: 1;
+  visibility: visible;
 }
 .menu-container .menu-container__cards {
   width: 100%;

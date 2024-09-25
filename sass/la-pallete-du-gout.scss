@@ -105,41 +105,58 @@ header {
         width: 40px;
     }
 
+
     // Icone Heart
     &__heart {
         position: absolute;
         top: 20px;
         right: 40px;
-
+    
         input[type="checkbox"] {
             display: none;
         }
-
+    
         label {
             font-size: 30px;
             cursor: pointer;
             position: relative;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
         }
-
+    
+        .heart-empty,
+        .heart-full {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 1s ease;
+        }
+    
         .heart-empty {
             color: $blackcolor;
+            opacity: 1;
+            visibility: visible;
         }
-
+    
         .heart-full {
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             background-clip: text;
             color: transparent;
-            display: none;
+            opacity: 0;
+            visibility: hidden;
         }
-
+    
         input[type="checkbox"]:checked + label .heart-empty {
-            display: none;
+            opacity: 0;
+            visibility: hidden;
         }
-
+    
         input[type="checkbox"]:checked + label .heart-full {
-            display: inline;
+            opacity: 1;
+            visibility: visible;
         }
-    }
+    }    
 
     // Menu Cards
     .menu-container {
