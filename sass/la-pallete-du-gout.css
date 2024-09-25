@@ -125,6 +125,9 @@ header .header__logo img {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
 }
 .menu-container .menu-container__card h3 {
   padding-bottom: 5px;
@@ -138,6 +141,39 @@ header .header__logo img {
 .menu-container .menu-container__price {
   font-weight: bold;
   color: #353535;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-container .delay-1 {
+  animation-delay: 0.5s;
+}
+.menu-container .delay-2 {
+  animation-delay: 1s;
+}
+.menu-container .delay-3 {
+  animation-delay: 1.5s;
+}
+.menu-container .delay-4 {
+  animation-delay: 2s;
+}
+.menu-container .delay-5 {
+  animation-delay: 2.5s;
+}
+.menu-container .delay-6 {
+  animation-delay: 3s;
+}
+.menu-container .delay-7 {
+  animation-delay: 3.5s;
+}
+.menu-container .delay-8 {
+  animation-delay: 4s;
+}
+.menu-container .delay-9 {
+  animation-delay: 4.5s;
 }
 
 .commander {
