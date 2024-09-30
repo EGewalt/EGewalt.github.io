@@ -176,9 +176,14 @@ header {
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.5s forwards;
+            position: relative;
+            overflow: hidden;
     
             h3 {
                 padding-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
     
             p {
@@ -186,20 +191,26 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                position: relative;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     
         &__price {
             font-weight: bold;
             color: #353535;
+            transition: transform 0.5s ease;
+            z-index: 1;
+            margin-left: auto;
         }
     
-        // Card Valdidate
         &__validator {
-            background-color: $greencolor;
-            transition: width 0.5s, transform 0.5s;
+            background-color: $validatecolor;
+            transition: width 0.5s ease, transform 0.5s ease;
             width: 0;
-            transform: translateX(100%);
             position: absolute;
             right: 0;
             top: 0;
@@ -208,11 +219,13 @@ header {
             justify-content: center;
             align-items: center;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+    
             i {
                 overflow: hidden;
                 transition: width 2s, transform 2s;
-                background-color: $greencolor;
+                background-color: $validatecolor;
                 color: $whitecolor;
                 font-size: 20px;
             }
@@ -223,19 +236,19 @@ header {
         display: none;
     
         &:checked ~ .menu-container__validator {
-            width: 15%;
+            width: 20%;
             opacity: 1;
             transform: translateX(0);
         }
     
         &:checked ~ .menu-container__card {
-            width: calc(75% - 15%);
+            transform: translateX(-20%);
         }
     
         &:checked ~ .menu-container__validator i {
             opacity: 1;
         }
-    }    
+    }
     
     .card-label {
         cursor: pointer;
@@ -245,8 +258,8 @@ header {
         right: 0;
         bottom: 0;
         background-color: transparent;
-        z-index: 1;
-    }    
+        z-index: 1; 
+    }
     
 
     // Anim Cards

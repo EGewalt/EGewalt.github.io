@@ -128,25 +128,37 @@ header .header__logo img {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.5s forwards;
+  position: relative;
+  overflow: hidden;
 }
 .menu-container .menu-container__card h3 {
   padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-container .menu-container__card p {
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-container .menu-container__price {
   font-weight: bold;
   color: #353535;
+  transition: transform 0.5s ease;
+  z-index: 1;
+  margin-left: auto;
 }
 .menu-container .menu-container__validator {
-  background-color: #008766;
-  transition: width 0.5s, transform 0.5s;
+  background-color: #99E2D0;
+  transition: width 0.5s ease, transform 0.5s ease;
   width: 0;
-  transform: translateX(100%);
   position: absolute;
   right: 0;
   top: 0;
@@ -155,11 +167,13 @@ header .header__logo img {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .menu-container .menu-container__validator i {
   overflow: hidden;
   transition: width 2s, transform 2s;
-  background-color: #008766;
+  background-color: #99E2D0;
   color: #ffffff;
   font-size: 20px;
 }
@@ -167,12 +181,12 @@ header .header__logo img {
   display: none;
 }
 .menu-container .card-checkbox:checked ~ .menu-container__validator {
-  width: 15%;
+  width: 20%;
   opacity: 1;
   transform: translateX(0);
 }
 .menu-container .card-checkbox:checked ~ .menu-container__card {
-  width: 60%;
+  transform: translateX(-20%);
 }
 .menu-container .card-checkbox:checked ~ .menu-container__validator i {
   opacity: 1;
