@@ -193,7 +193,61 @@ header {
             font-weight: bold;
             color: #353535;
         }
+    
+        // Card Valdidate
+        &__validator {
+            background-color: $greencolor;
+            transition: width 0.5s, transform 0.5s;
+            width: 0;
+            transform: translateX(100%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        
+            i {
+                overflow: hidden;
+                transition: width 2s, transform 2s;
+                background-color: $greencolor;
+                color: $whitecolor;
+                font-size: 20px;
+            }
+        }
     }
+    
+    .card-checkbox {
+        display: none;
+    
+        &:checked ~ .menu-container__validator {
+            width: 15%;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        &:checked ~ .menu-container__card {
+            width: calc(75% - 15%);
+        }
+    
+        &:checked ~ .menu-container__validator i {
+            opacity: 1;
+        }
+    }    
+    
+    .card-label {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 1;
+    }    
+    
 
     // Anim Cards
     @keyframes fadeIn {
