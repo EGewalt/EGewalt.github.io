@@ -99,23 +99,21 @@ header {
     }
 
     .titre-section {
-        padding-top: 25px;
-        padding-bottom: 5px;
+        padding: 25px 0 5px;
         border-bottom: #99E2D0 3px solid;
         width: 40px;
     }
 
-
-    // Icone Heart
+    // Icône Heart
     &__heart {
         position: absolute;
         top: 20px;
         right: 40px;
-    
+
         input[type="checkbox"] {
             display: none;
         }
-    
+
         label {
             font-size: 30px;
             cursor: pointer;
@@ -124,7 +122,7 @@ header {
             width: 1em;
             height: 1em;
         }
-    
+
         .heart-empty,
         .heart-full {
             position: absolute;
@@ -132,13 +130,13 @@ header {
             left: 0;
             transition: opacity 1s ease;
         }
-    
+
         .heart-empty {
             color: $blackcolor;
             opacity: 1;
             visibility: visible;
         }
-    
+
         .heart-full {
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             background-clip: text;
@@ -146,110 +144,113 @@ header {
             opacity: 0;
             visibility: hidden;
         }
-    
+
         input[type="checkbox"]:checked + label .heart-empty {
             opacity: 0;
             visibility: hidden;
         }
-    
+
         input[type="checkbox"]:checked + label .heart-full {
             opacity: 1;
             visibility: visible;
         }
-    }    
+    }
 
     // Menu Cards
-    .menu-container {
-        &__cards {
-            width: 100%;
-            margin-top: 10px;
-        }
-    
-        &__card {
-            background-color: $whitecolor;
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 10px;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-            display: flex;
-            flex-direction: column;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.5s forwards;
-            position: relative;
+    &__cards {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &__card {
+        background-color: $whitecolor;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            padding-bottom: 5px;
+            white-space: nowrap;
             overflow: hidden;
-    
-            h3 {
-                padding-bottom: 5px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-    
-            p {
-                margin: 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: relative;
-                width: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+            text-overflow: ellipsis;
         }
-    
-        &__price {
-            font-weight: bold;
-            color: #353535;
-            transition: transform 0.5s ease;
-            z-index: 1;
-            margin-left: auto;
-        }
-    
-        &__validator {
-            background-color: $validatecolor;
-            transition: width 0.5s ease, transform 0.5s ease;
-            width: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
+
+        p {
+            margin: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-    
-            i {
-                overflow: hidden;
-                transition: width 2s, transform 2s;
-                background-color: $validatecolor;
-                color: $whitecolor;
-                font-size: 20px;
-            }
+            position: relative;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: transform 0.5s ease;
         }
     }
-    
+
+    &__price {
+        font-weight: bold;
+        color: #353535;
+        z-index: 1;
+        margin-left: auto;
+        transition: transform 0.5s ease;
+    }
+
+    &__validator {
+        background-color: $validatecolor;
+        transition: width 0.5s ease, transform 0.5s ease;
+        width: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        i {
+            overflow: hidden;
+            background-color: $validatecolor;
+            color: $whitecolor;
+            font-size: 20px;
+        }
+    }
+
     .card-checkbox {
         display: none;
-    
+
         &:checked ~ .menu-container__validator {
             width: 20%;
             opacity: 1;
             transform: translateX(0);
         }
-    
-        &:checked ~ .menu-container__card {
+
+        &:checked ~ .menu-container__card p {
             transform: translateX(-20%);
         }
-    
+
+        
+        &:checked + .card-label + h3 + p .menu-container__price {
+            transform: translateX(-20%);
+        }
+
         &:checked ~ .menu-container__validator i {
             opacity: 1;
         }
     }
-    
+
     .card-label {
         cursor: pointer;
         position: absolute;
@@ -260,7 +261,6 @@ header {
         background-color: transparent;
         z-index: 1; 
     }
-    
 
     // Anim Cards
     @keyframes fadeIn {
@@ -269,43 +269,19 @@ header {
             transform: translateY(0);
         }
     }
-    
-    .delay-1 {
-        animation-delay: 0.5s;
-    }
-    
-    .delay-2 {
-        animation-delay: 1s;
-    }
-    
-    .delay-3 {
-        animation-delay: 1.5s;
-    }
-    
-    .delay-4 {
-        animation-delay: 2s;
-    }
-    
-    .delay-5 {
-        animation-delay: 2.5s;
-    }
-    
-    .delay-6 {
-        animation-delay: 3s;
-    }
-    
-    .delay-7 {
-        animation-delay: 3.5s;
-    }
-    
-    .delay-8 {
-        animation-delay: 4s;
-    }
-    
-    .delay-9 {
-        animation-delay: 4.5s;
-    }
+
+    // Délais d'animation
+    .delay-1 { animation-delay: 0.5s; }
+    .delay-2 { animation-delay: 1s; }
+    .delay-3 { animation-delay: 1.5s; }
+    .delay-4 { animation-delay: 2s; }
+    .delay-5 { animation-delay: 2.5s; }
+    .delay-6 { animation-delay: 3s; }
+    .delay-7 { animation-delay: 3.5s; }
+    .delay-8 { animation-delay: 4s; }
+    .delay-9 { animation-delay: 4.5s; }
 }
+
 
 // BOUTON COMMANDER
 .commander {
