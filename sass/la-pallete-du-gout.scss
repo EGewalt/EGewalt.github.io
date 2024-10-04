@@ -228,6 +228,8 @@ header {
         }
     }
 
+    // Card Checkbox
+
     .card-checkbox {
         display: none;
 
@@ -235,19 +237,29 @@ header {
             width: 20%;
             opacity: 1;
             transform: translateX(0);
+            transition: width 0.5s ease, transform 0.5s ease;
         }
 
-        &:checked ~ .menu-container__card p {
-            transform: translateX(-20%);
-        }
-
-        
         &:checked + .card-label + h3 + p .menu-container__price {
-            transform: translateX(-20%);
+            position: relative;
+            transform: translateX(-1400%);
+            transition: transform 0.5s ease;
         }
 
         &:checked ~ .menu-container__validator i {
             opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .card-checkbox {
+            &:checked ~ .menu-container__validator {
+                width: 20%;
+            }
+
+            &:checked + .card-label + h3 + p .menu-container__price {
+                transform: translateX(-260%);
+            }
         }
     }
 
@@ -281,7 +293,6 @@ header {
     .delay-8 { animation-delay: 4s; }
     .delay-9 { animation-delay: 4.5s; }
 }
-
 
 // BOUTON COMMANDER
 .commander {
