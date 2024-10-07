@@ -187,18 +187,19 @@ header .header__logo img {
 }
 .menu-container .card-checkbox:checked + .card-label + h3 + p .menu-container__price {
   position: relative;
-  transform: translateX(-1400%);
+  transform: translateX(-260%);
   transition: transform 0.5s ease;
+  text-overflow: ellipsis;
 }
 .menu-container .card-checkbox:checked ~ .menu-container__validator i {
   opacity: 1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1024px) {
   .menu-container .card-checkbox:checked ~ .menu-container__validator {
     width: 20%;
   }
   .menu-container .card-checkbox:checked + .card-label + h3 + p .menu-container__price {
-    transform: translateX(-260%);
+    transform: translateX(-1400%);
   }
 }
 .menu-container .card-label {

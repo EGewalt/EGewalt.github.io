@@ -229,39 +229,41 @@ header {
     }
 
     // Card Checkbox
-
     .card-checkbox {
         display: none;
-
+    
         &:checked ~ .menu-container__validator {
             width: 20%;
             opacity: 1;
             transform: translateX(0);
             transition: width 0.5s ease, transform 0.5s ease;
         }
-
+    
         &:checked + .card-label + h3 + p .menu-container__price {
             position: relative;
-            transform: translateX(-1400%);
+            transform: translateX(-260%);
             transition: transform 0.5s ease;
+            text-overflow: ellipsis;
         }
-
+    
         &:checked ~ .menu-container__validator i {
             opacity: 1;
         }
+        
     }
-
-    @media screen and (max-width: 768px) {
+    
+    @include media-desktop {
         .card-checkbox {
             &:checked ~ .menu-container__validator {
                 width: 20%;
             }
-
+    
             &:checked + .card-label + h3 + p .menu-container__price {
-                transform: translateX(-260%);
+                transform: translateX(-1400%);
             }
         }
     }
+    
 
     .card-label {
         cursor: pointer;
