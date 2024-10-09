@@ -36,6 +36,10 @@ $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
 body {
     background-color: $whitecolor;
+
+    @include media-desktop {
+        background-color: $whitecolor;
+    }
 }
 
 // Header
@@ -74,6 +78,11 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include media-desktop {
+            height: 383px;
+            
+        }
     }
 }
 
@@ -91,11 +100,22 @@ header {
     z-index: 1;
     padding: 20px;
 
+    @include media-desktop {
+        width: 1055px;
+        height: 1221px;
+        left: 420px;
+        @include flex-center;        
+    }
+
     h1 {
         font-family: "Shrikhand", serif;
         font-weight: lighter;
         font-size: 28px;
         padding-left: 1px;
+
+        @include media-desktop {
+            @include flex-center;
+        }
     }
 
     .titre-section {
@@ -109,6 +129,11 @@ header {
         position: absolute;
         top: 20px;
         right: 40px;
+
+        @include media-desktop {
+            top: 65px;
+            right: 340px;
+        }
 
         input[type="checkbox"] {
             display: none;
@@ -175,6 +200,10 @@ header {
         animation: fadeIn 0.5s forwards;
         position: relative;
         overflow: hidden;
+
+        @include media-desktop {
+            width: 634px;
+        }
 
         h3 {
             padding-bottom: 5px;
@@ -301,11 +330,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 45px;
-    background-color: #F6F6F6;
+    padding-top: 40px;
+
 
     // Button par défaut
     .button {
