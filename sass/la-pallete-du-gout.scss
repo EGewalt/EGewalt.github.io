@@ -274,7 +274,7 @@ header {
         display: none;
     
         &:checked ~ .menu-container__validator {
-            width: 20%;
+            width: 70px;
             opacity: 1;
             transform: translateX(0);
             transition: width 0.5s ease, transform 0.5s ease;
@@ -296,11 +296,11 @@ header {
     @include media-desktop {
         .card-checkbox {
             &:checked ~ .menu-container__validator {
-                width: 20%;
+                width: 59px;
             }
     
             &:checked + .card-label + h3 + p .menu-container__price {
-                transform: translateX(-1400%);
+                transform: translateX(-60px);
             }
         }
     }
