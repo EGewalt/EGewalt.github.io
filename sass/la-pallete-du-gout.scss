@@ -7,6 +7,7 @@ $blue-lightcolor: #89C8FA;
 $blue-darkcolor: #003A68;
 $purplecolor: #9356DC;
 $greycolor: #EAEAEA;
+$greylightcolor: #F6F6F6;
 $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
 // Mixin
@@ -94,7 +95,7 @@ header {
     min-height: 300px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    background-color: #F6F6F6;
+    background-color: $greylightcolor;
     position: relative;
     margin-top: -50px;
     z-index: 1;
