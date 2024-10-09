@@ -7,6 +7,7 @@ $blue-lightcolor: #89C8FA;
 $blue-darkcolor: #003A68;
 $purplecolor: #9356DC;
 $greycolor: #EAEAEA;
+$greylightcolor: #F6F6F6;
 $buttongradient: linear-gradient(-185.33deg, #FF79DA -11.44%, #9356DC 123.93%);
 
 // Mixin
@@ -84,8 +85,7 @@ header {
 }
 
 main {
-    background-color: rgb(247, 247, 247);
-
+   
     // Section Presentation
     .main__presentation {
         display: flex;
@@ -94,6 +94,8 @@ main {
         height: 100%;
         text-align: center;
         padding: 20px;
+        background: $greylightcolor;
+;
 
         section {
             max-width: 600px;
@@ -162,7 +164,7 @@ main {
         padding-left: 20px;
 
         @include media-desktop {
-            padding-left: 260px;
+            padding-left: 110px;
             align-self: flex-start; 
             padding-top: 35px; 
         }
@@ -230,7 +232,7 @@ main {
 
 // Section Restaurants
 .main-restaurants {
-    background-color: $greycolor;
+    background-color: $greylightcolor;
     padding-bottom: 70px;
     padding-top: 40px;
     @include flex-center;
@@ -250,7 +252,7 @@ main {
         margin-bottom: 20px;
 
         @include media-desktop {
-            padding-left: 380px;
+            padding-left: 230px;
             padding-bottom: 20px;
         }
     }
