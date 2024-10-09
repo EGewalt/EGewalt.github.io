@@ -122,7 +122,7 @@ header .header__logo img {
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .menu-container__heart .heart-empty {
   color: #000000;
@@ -134,6 +134,14 @@ header .header__logo img {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-container__heart .heart-full.active {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-container__heart .heart-empty.inactive {
   opacity: 0;
   visibility: hidden;
 }

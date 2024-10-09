@@ -334,7 +334,7 @@ main {
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 1s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
     
         .heart-empty {
@@ -351,16 +351,18 @@ main {
             visibility: hidden;
         }
     
-        input[type="checkbox"]:checked + label .heart-empty {
-            opacity: 0;
-            visibility: hidden;
-        }
-    
+        .heart-full.active,
         input[type="checkbox"]:checked + label .heart-full {
             opacity: 1;
             visibility: visible;
         }
-    } 
+    
+        .heart-empty.inactive,
+        input[type="checkbox"]:checked + label .heart-empty {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }    
     
     // New card
 

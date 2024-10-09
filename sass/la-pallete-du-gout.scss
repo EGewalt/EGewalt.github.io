@@ -129,16 +129,16 @@ header {
         position: absolute;
         top: 20px;
         right: 40px;
-
+    
         @include media-desktop {
             top: 65px;
             right: 340px;
         }
-
+    
         input[type="checkbox"] {
             display: none;
         }
-
+    
         label {
             font-size: 30px;
             cursor: pointer;
@@ -147,21 +147,21 @@ header {
             width: 1em;
             height: 1em;
         }
-
+    
         .heart-empty,
         .heart-full {
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 1s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
-
+    
         .heart-empty {
             color: $blackcolor;
             opacity: 1;
             visibility: visible;
         }
-
+    
         .heart-full {
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             background-clip: text;
@@ -169,17 +169,29 @@ header {
             opacity: 0;
             visibility: hidden;
         }
-
-        input[type="checkbox"]:checked + label .heart-empty {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        input[type="checkbox"]:checked + label .heart-full {
+    
+        .heart-full.active {
             opacity: 1;
             visibility: visible;
         }
-    }
+    
+        .heart-empty.inactive {
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        input[type="checkbox"]:checked + label {
+            .heart-empty {
+                opacity: 0;
+                visibility: hidden;
+            }
+    
+            .heart-full {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }    
 
     // Menu Cards
     &__cards {
