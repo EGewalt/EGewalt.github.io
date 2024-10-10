@@ -118,8 +118,7 @@ main .main-fonctionnement__h1 {
 }
 @media screen and (min-width: 1024px) {
   main .main-fonctionnement__h1 {
-    padding-left: 180px;
-    align-self: flex-start;
+    padding-left: 270px;
     padding-top: 35px;
   }
 }
@@ -199,7 +198,7 @@ main .main-restaurants__h1 {
 }
 @media screen and (min-width: 1024px) {
   main .main-restaurants__h1 {
-    padding-left: 300px;
+    padding-left: 385px;
     padding-bottom: 20px;
   }
 }
