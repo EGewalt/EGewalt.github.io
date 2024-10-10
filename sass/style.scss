@@ -164,7 +164,7 @@ main {
         padding-left: 20px;
 
         @include media-desktop {
-            padding-left: 110px;
+            padding-left: 180px;
             align-self: flex-start; 
             padding-top: 35px; 
         }
@@ -252,7 +252,7 @@ main {
         margin-bottom: 20px;
 
         @include media-desktop {
-            padding-left: 230px;
+            padding-left: 300px;
             padding-bottom: 20px;
         }
     }
