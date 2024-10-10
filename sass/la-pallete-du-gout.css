@@ -229,7 +229,6 @@ header .header__logo img {
   width: 70px;
   opacity: 1;
   transform: translateX(0);
-  transition: width 0.5s ease, transform 0.5s ease;
 }
 .menu-container .card-checkbox:checked + .card-label + h3 + p .menu-container__price {
   position: relative;
