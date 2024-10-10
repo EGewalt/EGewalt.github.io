@@ -118,7 +118,7 @@ main .main-fonctionnement__h1 {
 }
 @media screen and (min-width: 1024px) {
   main .main-fonctionnement__h1 {
-    padding-left: 270px;
+    padding-left: 260px;
     padding-top: 35px;
   }
 }
