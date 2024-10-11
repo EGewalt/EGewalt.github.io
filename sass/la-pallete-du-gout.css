@@ -176,22 +176,19 @@ header .header__logo img {
     width: 634px;
   }
 }
-.menu-container__card h3 {
-  padding-bottom: 5px;
+.menu-container__card h3, .menu-container__card p {
+  margin: 0;
+  font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu-container__card p {
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   transition: transform 0.5s ease;
 }
 .menu-container__price {
@@ -233,8 +230,6 @@ header .header__logo img {
 .menu-container .card-checkbox:checked + .card-label + h3 + p .menu-container__price {
   position: relative;
   transform: translateX(-260%);
-  transition: transform 0.5s ease;
-  text-overflow: ellipsis;
 }
 .menu-container .card-checkbox:checked ~ .menu-container__validator i {
   opacity: 1;
