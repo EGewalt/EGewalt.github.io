@@ -244,6 +244,7 @@ header {
         z-index: 1;
         margin-left: auto;
         transition: transform 0.5s ease;
+        margin-top: -20px;
     }
 
     &__validator {
@@ -270,39 +271,36 @@ header {
     }
 
     // Card Checkbox
-    .card-checkbox {
-        display: none;
-    
-        &:checked ~ .menu-container__validator {
-            width: 70px;
-            opacity: 1;
-            transform: translateX(0);
-        }
-    
-        &:checked + .card-label + h3 + p .menu-container__price {
-            position: relative;
-            transform: translateX(-260%);
-        }
-    
-        &:checked ~ .menu-container__validator i {
-            opacity: 1;
-        }
-        
-    }
-    
-    @include media-desktop {
-        .card-checkbox {
-            &:checked ~ .menu-container__validator {
-                width: 59px;
-            }
-    
-            &:checked + .card-label + h3 + p .menu-container__price {
-                transform: translateX(-60px);
-            }
-        }
-    }
-    
+.card-checkbox {
+    display: none;
 
+    &:checked ~ .menu-container__validator {
+        width: 70px;
+        transform: translateX(0);
+    }
+
+    &:checked + .card-label + h3 + p ~ .menu-container__price {
+        position: relative;
+        transform: translateX(-260%);
+    }
+
+    &:checked ~ .menu-container__validator i {
+        opacity: 1;
+    }
+}
+
+@include media-desktop {
+    .card-checkbox {
+        &:checked ~ .menu-container__validator {
+            width: 59px;
+        }
+
+        &:checked + .card-label + h3 + p ~ .menu-container__price {
+            transform: translateX(-60px);
+        }
+    }
+}
+    
     .card-label {
         cursor: pointer;
         position: absolute;
