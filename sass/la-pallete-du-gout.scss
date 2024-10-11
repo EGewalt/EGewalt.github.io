@@ -93,8 +93,7 @@ header {
     display: flex;
     flex-direction: column;
     min-height: 300px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius: 50px 50px 0 0;
     background-color: $greylightcolor;
     position: relative;
     margin-top: -50px;
@@ -105,7 +104,15 @@ header {
         width: 1055px;
         height: 1221px;
         left: 420px;
-        @include flex-center;        
+        width: 1055px;
+        height: 1221px;
+        left: 420px;
+        display: flex;
+        align-items: center;       
+
+        h1 {
+            padding-top: 25px;  
+        }
     }
 
     h1 {
@@ -116,23 +123,24 @@ header {
 
         @include media-desktop {
             @include flex-center;
+            margin-top: 0;
         }
     }
 
     .titre-section {
         padding: 25px 0 5px;
-        border-bottom: #99E2D0 3px solid;
+        border-bottom: 3px solid #99E2D0;
         width: 40px;
     }
 
     // Icône Heart
     &__heart {
         position: absolute;
-        top: 20px;
-        right: 40px;
+        top: 25px;
+        right: 45px;
     
         @include media-desktop {
-            top: 65px;
+            top: 50px;
             right: 340px;
         }
     

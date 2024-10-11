@@ -59,8 +59,7 @@ header .header__logo img {
   display: flex;
   flex-direction: column;
   min-height: 300px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 50px 50px 0 0;
   background-color: #F6F6F6;
   position: relative;
   margin-top: -50px;
@@ -72,9 +71,14 @@ header .header__logo img {
     width: 1055px;
     height: 1221px;
     left: 420px;
+    width: 1055px;
+    height: 1221px;
+    left: 420px;
     display: flex;
-    justify-content: center;
     align-items: center;
+  }
+  .menu-container h1 {
+    padding-top: 25px;
   }
 }
 .menu-container h1 {
@@ -88,21 +92,22 @@ header .header__logo img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
 }
 .menu-container .titre-section {
   padding: 25px 0 5px;
-  border-bottom: #99E2D0 3px solid;
+  border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
 .menu-container__heart {
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: 25px;
+  right: 45px;
 }
 @media screen and (min-width: 1024px) {
   .menu-container__heart {
-    top: 65px;
+    top: 50px;
     right: 340px;
   }
 }
