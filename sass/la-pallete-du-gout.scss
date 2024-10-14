@@ -201,32 +201,35 @@ header {
             }
         }
     }    
+// Menu Cards
+&__cards {
+    width: 100%;
+    margin-top: 10px;
+}
 
-    // Menu Cards
-    &__cards {
-        width: 100%;
-        margin-top: 10px;
+&__card {
+    background-color: $whitecolor;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+    position: relative;
+    overflow: hidden;
+
+    @include media-desktop {
+        width: 634px;
     }
 
-    &__card {
-        background-color: $whitecolor;
-        border-radius: 15px;
-        padding: 15px;
-        margin-bottom: 10px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+    &__content {
         display: flex;
         flex-direction: column;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.5s forwards;
-        position: relative;
-        overflow: hidden;
-    
-        @include media-desktop {
-            width: 634px;
-        }
-    
-        
+
         h3, p {
             margin: 0;
             font-size: 15px;
@@ -234,68 +237,77 @@ header {
             overflow: hidden;
             text-overflow: ellipsis;
         }
-    
-        p {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            transition: transform 0.5s ease;
-        }
-    }
-    
-
-    &__price {
-        font-weight: bold;
-        color: #353535;
-        z-index: 1;
-        margin-left: auto;
-        transition: transform 0.5s ease;
-        margin-top: -20px;
     }
 
-    &__validator {
-        background-color: $validatecolor;
-        transition: width 0.5s ease, transform 0.5s ease;
-        width: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
+    p {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        i {
-            overflow: hidden;
-            background-color: $validatecolor;
-            color: $whitecolor;
-            font-size: 20px;
-        }
+        position: relative;
+        width: 100%;
+        transition: transform 0.5s ease;
     }
+}
 
-    // Card Checkbox
+&__price {
+    font-weight: bold;
+    color: #353535;
+    z-index: 1;
+    margin-left: auto;
+    transition: transform 0.5s ease;
+    margin-top: -20px;
+}
+
+&__validator {
+    background-color: $validatecolor;
+    transition: width 0.5s ease, transform 0.5s ease;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+i.fa-circle-check {
+    background-color: $validatecolor;
+    color: $whitecolor;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Card Checkbox
 .card-checkbox {
     display: none;
 
+    
     &:checked ~ .menu-container__validator {
         width: 70px;
         transform: translateX(0);
     }
 
-    &:checked + .card-label + h3 + p ~ .menu-container__price {
+    &:checked + .card-label ~ .menu-container__card__content + .menu-container__price {
         position: relative;
-        transform: translateX(-260%);
+        transform: translateX(-60px);
     }
 
-    &:checked ~ .menu-container__validator i {
+    
+    &:checked ~ i.fa-circle-check {
         opacity: 1;
     }
 }
+
 
 @include media-desktop {
     .card-checkbox {

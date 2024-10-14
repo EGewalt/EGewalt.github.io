@@ -181,7 +181,11 @@ header .header__logo img {
     width: 634px;
   }
 }
-.menu-container__card h3, .menu-container__card p {
+.menu-container__card__content {
+  display: flex;
+  flex-direction: column;
+}
+.menu-container__card__content h3, .menu-container__card__content p {
   margin: 0;
   font-size: 15px;
   white-space: nowrap;
@@ -219,11 +223,16 @@ header .header__logo img {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.menu-container__validator i {
-  overflow: hidden;
+.menu-container i.fa-circle-check {
   background-color: #99E2D0;
   color: #ffffff;
   font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .menu-container .card-checkbox {
   display: none;
@@ -232,11 +241,11 @@ header .header__logo img {
   width: 70px;
   transform: translateX(0);
 }
-.menu-container .card-checkbox:checked + .card-label + h3 + p ~ .menu-container__price {
+.menu-container .card-checkbox:checked + .card-label ~ .menu-container__card__content + .menu-container__price {
   position: relative;
-  transform: translateX(-260%);
+  transform: translateX(-60px);
 }
-.menu-container .card-checkbox:checked ~ .menu-container__validator i {
+.menu-container .card-checkbox:checked ~ i.fa-circle-check {
   opacity: 1;
 }
 @media screen and (min-width: 1024px) {
