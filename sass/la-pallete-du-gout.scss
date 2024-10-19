@@ -276,14 +276,13 @@ header {
 
 
 i.fa-circle-check {
-    background-color: $validatecolor;
     color: $whitecolor;
     font-size: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
     position: absolute;
     right: 25px;
-    top: 50%;
+    top: 53%;
     transform: translateY(-50%);
 }
 
@@ -309,6 +308,8 @@ i.fa-circle-check {
     
     &:checked ~ i.fa-circle-check {
         opacity: 1;
+        transition: opacity 0.01s ease;
+        
     }
 }
 
