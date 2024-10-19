@@ -184,7 +184,6 @@ header .header__logo img {
 .menu-container__card__content {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .menu-container__card__content h3, .menu-container__card__content p {
   margin: 0;
@@ -245,9 +244,6 @@ header .header__logo img {
 .menu-container .card-checkbox:checked + .card-label ~ .menu-container__card__content + .menu-container__price {
   position: relative;
   transform: translateX(-60px);
-}
-.menu-container .card-checkbox:checked + .card-label ~ .menu-container__card__content {
-  width: calc(90% - 70px);
 }
 .menu-container .card-checkbox:checked ~ i.fa-circle-check {
   opacity: 1;

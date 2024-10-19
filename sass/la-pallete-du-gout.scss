@@ -226,11 +226,9 @@ header {
     }
 
     
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 70px);
-    transition: width 0.5s ease;
-    min-width: 150px;
+    &__content {
+        display: flex;
+        flex-direction: column;
 
         h3, p {
             margin: 0;
@@ -238,7 +236,6 @@ header {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: 100%;
         }
     }
 
@@ -305,11 +302,6 @@ i.fa-circle-check {
         transform: translateX(-60px);
     }
 
-    &:checked + .card-label ~ .menu-container__card__content {
-        width: calc(90% - 70px);
-        min-width: 150px;
-    }
-
     
     &:checked ~ i.fa-circle-check {
         opacity: 1;
@@ -327,7 +319,7 @@ i.fa-circle-check {
             transform: translateX(-60px);
         }
     }
-    
+}
     
     .card-label {
         cursor: pointer;
