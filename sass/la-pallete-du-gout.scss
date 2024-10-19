@@ -302,6 +302,10 @@ i.fa-circle-check {
         transform: translateX(-60px);
     }
 
+    &:checked + .card-label ~ .menu-container__card__content {
+        width: calc(90% - 70px);
+    }
+
     
     &:checked ~ i.fa-circle-check {
         opacity: 1;
