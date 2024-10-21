@@ -42,6 +42,7 @@ header .header__logo img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  max-height: 250px;
 }
 @media screen and (min-width: 768px) {
   .image-container img {
@@ -295,6 +296,9 @@ header .header__logo img {
 }
 .menu-container .delay-9 {
   animation-delay: 4.5s;
+}
+.menu-container .delay-10 {
+  animation-delay: 5s;
 }
 
 .commander {

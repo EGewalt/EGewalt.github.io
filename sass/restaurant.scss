@@ -81,6 +81,7 @@ header {
         width: 100%;
         height: auto;
         object-fit: cover;
+        max-height: 250px;
 
         @include media-tablet {
             max-height: 300px;
@@ -355,6 +356,7 @@ header {
     .delay-7 { animation-delay: 3.5s; }
     .delay-8 { animation-delay: 4s; }
     .delay-9 { animation-delay: 4.5s; }
+    .delay-10 { animation-delay: 5s; }
 }
 
 // BOUTON COMMANDER
