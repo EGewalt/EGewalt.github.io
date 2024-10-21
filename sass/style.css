@@ -256,8 +256,9 @@ main .main-restaurants__text p {
 }
 main .main-restaurants__heart {
   position: absolute;
-  top: 20px;
-  right: 40px;
+  top: 185px;
+  right: 25px;
+  z-index: 1;
 }
 main .main-restaurants__heart input[type=checkbox] {
   display: none;

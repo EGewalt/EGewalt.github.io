@@ -320,8 +320,9 @@ main {
     // Icone Heart
     &__heart {
         position: absolute;
-        top: 20px;
-        right: 40px;
+        top: 185px;
+        right: 25px;
+        z-index: 1;
     
         input[type="checkbox"] {
             display: none;
